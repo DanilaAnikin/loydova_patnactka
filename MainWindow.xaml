@@ -1,0 +1,54 @@
+<Window x:Class="Puzzle15.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Patnactka"
+        Height="550"
+        Width="450"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Background="{StaticResource BackgroundBrush}">
+
+    <DockPanel>
+
+        <TextBlock DockPanel.Dock="Top"
+                   Text="Patnactka"
+                   FontSize="24"
+                   FontWeight="Light"
+                   Foreground="{StaticResource TextBrush}"
+                   HorizontalAlignment="Center"
+                   Margin="0,10,0,5"/>
+
+        <TextBlock DockPanel.Dock="Top"
+                   x:Name="MoveCounterText"
+                   Text="Tahy: 0"
+                   FontSize="14"
+                   Foreground="{StaticResource TextBrush}"
+                   HorizontalAlignment="Center"
+                   Margin="0,0,0,10"/>
+
+        <StackPanel DockPanel.Dock="Bottom"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    Margin="0,15,0,15">
+
+            <Button Content="Nova hra"
+                    Style="{StaticResource GreenButtonStyle}"
+                    Click="OnNewGame"
+                    Margin="0,0,10,0"/>
+
+            <Button Content="Konec"
+                    Style="{StaticResource RedButtonStyle}"
+                    Click="OnExit"/>
+
+        </StackPanel>
+
+        <UniformGrid x:Name="PuzzleGrid"
+                     Rows="4"
+                     Columns="4"
+                     HorizontalAlignment="Center"
+                     VerticalAlignment="Center"
+                     Width="320"
+                     Height="320"/>
+
+    </DockPanel>
+</Window>
